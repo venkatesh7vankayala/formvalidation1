@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #sub{
+            margin-left: 160px;
+           
+        }
+    </style>
+</head>
+<body>
+    <form id="valid">
+        ADDMISSION NUMBER:<input type="text" id="addm"><br><br>
+       NAME: <input type="text" id="name"><br><br>
+       <span id="s1"style="display: none;">please enter a valid letters</span>
+       ROLL NO: <input type="text" id="rollno"><br><br>
+       CLASS:<input type="text" id="cls"><br><br>
+       GENDER:<input type="text" id="gd"><br><br>
+       MOBILE NUMBER:<input type="text" id="mobile"><br><br>
+       PASSWORD:<input type="text" id="pswd"><br><br>
+       DOB:<input type="date" id="dob"><br><br>
+       FATHER'S NAME:<input type="text" id="fname"><br><br>
+
+
+       <input type="submit" id="sub">
+    </form>
+    <script>
+        let valid=document.getElementById("valid")
+        let name=document.getElementById("name")
+        let rollno=document.getElementById("rollno")
+        let mobile=document.getElementById("mobile")
+        let pswd=document.getElementById("pswd")
+        let dob=document.getElementById("dob")
+        let fname=document.getElementById("fname")
+        let addm=document.getElementById("addm")
+        let cls=document.getElementById("cls")
+        let gd=document.getElementById("gd")
+
+
+
+
+
+
+        valid.addEventListener("submit",(e)=>{e.preventDefault();
+            let username=/[a-z]/
+            let method=username.test(name.value)
+            if(!method){
+                name.style.border="2px solid red"
+                s1.style.display="block"
+            }
+            let ROLLNO=/[a-z][0-9]/
+            let method1=ROLLNO.test(rollno.value)
+            if(!method1){
+                rollno.style.border="2px solid red"
+
+
+            }
+            let MOBILE=/[0-9]/
+            let method2=MOBILE.test(mobile.value)
+            if(!method2){
+                mobile.style.border="2px solid red"
+            }
+            let PASSWORD=/[a-z][@#%$^&*][A-Z]/
+            let method3=PASSWORD.test(pswd.value)
+            if(!method3){
+             pswd.style.border="2px solid red"
+            }
+            let DOB=/[0-9][-]/
+            let method4=DOB.test(dob.value)
+            if(!method4){
+                dob.style.border="2px solid red"
+            }
+            let ADDM=/[0-9]/
+            let method5=ADDM.test(addm.value)
+            if(!method5){
+                addm.style.border="2px solid red"
+            }
+            let CLASS=/[A-Z][.]/
+            let method6=CLASS.test(cls.value)
+            if(!method7){
+                cls.style.border="2px solid red"
+            }
+            let GENDER=/[a-z]/
+            let method8=GENDER.test(gd.value)
+            if(!method8){
+                gd.style.border="2px solid red"
+            }
+            let FNAME=/[a-z]/
+            let method9=FNAME.test(fname.value)
+            if(!method9){
+                fname.style.border="2px solid red"
+            }
+                 })
+    </script>
+</body>
+</html>
+
+
+
